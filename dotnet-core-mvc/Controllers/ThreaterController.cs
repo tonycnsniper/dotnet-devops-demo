@@ -12,6 +12,7 @@ public class ThreaterController : ControllerBase {
     private readonly DotnetCoreContext _context;
     private readonly ILogger<ThreaterController> _logger;
 
+    // mocked data for the following entity design 
     private static readonly string[] MockedThreaters = new[]
     {
         "Albany Event", "Auckland CBD Event"
