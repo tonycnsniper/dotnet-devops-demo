@@ -12,12 +12,6 @@ public class ThreaterController : ControllerBase {
     private readonly DotnetCoreContext _context;
     private readonly ILogger<ThreaterController> _logger;
 
-    // mocked data for the following entity design 
-    private static readonly string[] MockedThreaters = new[]
-    {
-        "Albany Event", "Auckland CBD Event"
-    };
-
     public ThreaterController(ILogger<ThreaterController> logger, DotnetCoreContext context) {
         _logger = logger;
         _context = context;
@@ -30,8 +24,7 @@ public class ThreaterController : ControllerBase {
         Threater[] threaters;
 
         try {
-            //threaters = await _context.Threater.ToArrayAsync();
-            threaters = generateThreaters();
+            threaters = await _context.Threater.ToArrayAsync();
 
             if (threaters == null || !threaters.Any()) {
                 _logger.LogWarning("No threaters found");
@@ -44,13 +37,5 @@ public class ThreaterController : ControllerBase {
 
         _logger.LogInformation("Successfully fetched {0} threaters from database", threaters.Length);
         return Ok(threaters);
-    }
-
-    private Threater[] generateThreaters() {
-        return MockedThreaters.Select((threater, index) => new Threater {
-            Id = (index + 1),
-            Name = threater,
-            Location = threater
-        }).ToArray();
     }
 }

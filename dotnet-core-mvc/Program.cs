@@ -3,21 +3,12 @@ using dotnet_core_mvc.Models;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<DotnetCoreContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DotnetCoreContext") 
-        ?? throw new InvalidOperationException("Connection string 'DotnetCoreContext' not found.")));
+
+builder.Services.AddDbContext<DotnetCoreContext>(opt => 
+    opt.UseNpgsql(builder.Configuration.GetConnectionString("postgresdb")));
 
 // Add services to the container.
 builder.Services.AddControllers();
-
-// Add additional services
-
-
-// Inject database context
-builder.Services.AddDbContext<DotnetCoreContext>(opt => 
-    opt.UseInMemoryDatabase("WeatherForecast"));
-
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
