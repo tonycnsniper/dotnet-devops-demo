@@ -15,6 +15,6 @@ public class Threater {
     public string? Location { get; set; }
 
     [Column("created_at")]
-    public DateTime Created_at { get; set; }
+    public DateTime CreatedAt { get; set; }
 
 }
