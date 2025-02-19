@@ -1,0 +1,58 @@
+# Project Title
+
+This is a demonstration system used to present how a movie ticket reservation platform works. In the meantime, it also highlights the importance of cloud skills in ensuring high availability.
+
+## 🚀 Features
+- Search theaters based on location
+- Reserve movie tickets
+- Buy tickets online
+- Share movie comments on posts
+
+## 🛠️ Installation
+
+```sh
+# Clone the repository
+git clone https://github.com/yourusername/yourproject.git
+cd yourproject
+
+# Install dependencies
+npm install
+
+# Start the project
+npm start
+```
+
+## 📜 Usage
+Explain how to use your project.
+
+## 🖼️ Screenshots
+![Screenshot](path/to/screenshot.png)
+
+## 🏗️ Built With
+- **React** - Frontend
+- **Node.js** - Backend
+- **Tailwind CSS** - Styling
+
+## 📦 Folder Structure
+```
+project-root/
+│-- src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.js
+│   ├── index.js
+│-- public/
+│-- package.json
+│-- README.md
+```
+
+## 🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+- **Tony** - [GitHub](https://github.com/yourusername)
+

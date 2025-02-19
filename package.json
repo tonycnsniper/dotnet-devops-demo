@@ -1,0 +1,20 @@
+{
+  "name": "dotnet-devops-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonycnsniper/dotnet-devops-demo.git"
+  },
+  "keywords": [],
+  "author": "Jun Chao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonycnsniper/dotnet-devops-demo/issues"
+  },
+  "homepage": "https://github.com/tonycnsniper/dotnet-devops-demo#readme",
+  "description": "A demo system used to demonstrate movie ticket reservation and high availability on the Cloud"
+}
