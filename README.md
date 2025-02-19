@@ -1,4 +1,4 @@
-# Project Title
+# Movie Reservation System
 
 This is a demonstration system used to present how a movie ticket reservation platform works. In the meantime, it also highlights the importance of cloud skills in ensuring high availability.
 
