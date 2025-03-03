@@ -14,7 +14,11 @@ public class Threater {
     [Column("location")]
     public string? Location { get; set; }
 
+    [Column("description")]
+    public string? Description { get; set; }
+    
     [Column("created_at")]
     public DateTime CreatedAt { get; set; }
+
 
 }

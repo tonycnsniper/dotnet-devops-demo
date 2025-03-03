@@ -17,7 +17,7 @@ export default function MoveList() {
   }, []);
 
   return (
-    <ul className="divide-y divide-gray-200 columns-3">
+    <ul className="relative overflow-hidden mb-8">
       {threaters &&
         threaters.map((threater) => (
           <EventCard key={threater.id} {...threater} />
