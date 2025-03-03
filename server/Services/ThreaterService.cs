@@ -12,9 +12,16 @@ public class ThreaterService : IThreaterService
         _context = context;
     }
 
-    public void AddThreater(Threater threater)
+    public async Task<bool> AddThreater(Threater threater)
     {
-        throw new NotImplementedException();
+        try {
+            await _context.Threater.AddAsync(threater);
+            await _context.SaveChangesAsync();
+            return true;
+        } catch (Exception ex) {
+            _logger.LogError(ex, "An error occurred while adding threaters.");
+            return false;
+        }
     }
 
     public async Task<IEnumerable<Threater>> DisplayAllThreaters()

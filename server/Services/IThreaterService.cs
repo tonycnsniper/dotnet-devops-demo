@@ -5,7 +5,7 @@ public interface IThreaterService
 {
     Task<IEnumerable<Threater>> DisplayAllThreaters();
     Threater GetThreaterById(int id);
-    void AddThreater(Threater threater);
+    Task<bool> AddThreater(Threater threater);
     void RemoveThreater(int id);
 
 }

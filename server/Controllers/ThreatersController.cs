@@ -1,3 +1,5 @@
+using System.Security.Policy;
+using System.Threading.Tasks;
 using dotnet_core_mvc.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -21,5 +23,12 @@ public class ThreatersController : ControllerBase {
     {
         var threaters = await _threaterService.DisplayAllThreaters();
         return Ok(threaters);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<bool>> AddThreaters(Threater threater)
+    {
+        bool result = await _threaterService.AddThreater(threater);
+        return Ok(result);
     }
 }
