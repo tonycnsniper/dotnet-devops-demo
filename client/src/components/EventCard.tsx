@@ -1,6 +1,6 @@
 import { Threater } from "../types/threater";
 
-export default function EventCard({ name, location }: Threater) {
+export default function EventCard({ name, location, description }: Threater) {
   return (
     <div className="rounded-t-lg overflow-hidden p-10 flex justify-center">
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -8,7 +8,7 @@ export default function EventCard({ name, location }: Threater) {
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{ name }</div>
             <p className="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              { description }
             </p>
           </div>
           <div className="px-6 pt-4 pb-2">
