@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using dotnet_core_mvc.Models;
 using Microsoft.Extensions.DependencyInjection;
+using dotnet_core_mvc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

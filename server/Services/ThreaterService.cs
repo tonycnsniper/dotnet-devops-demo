@@ -2,6 +2,8 @@
 using dotnet_core_mvc.Models;
 using Microsoft.EntityFrameworkCore;
 
+namespace dotnet_core_mvc.Services;
+
 public class ThreaterService : IThreaterService
 {
     private readonly DotnetCoreContext _context;
