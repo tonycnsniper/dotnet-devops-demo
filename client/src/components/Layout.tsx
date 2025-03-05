@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
+import { Box, Container, Grid } from "@radix-ui/themes";
+
 import Navbar from "./Navbar";
-import Modal from "./Modal";
+import React from "react";
 
 type Props = {
   children: ReactNode;
@@ -8,13 +10,15 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <>
-      <Navbar />
-      <div className="container pt-16">
-        <div className="inner container max-w-screen-md mx-auto pt-2">
+    <React.Fragment>
+      <Grid className="">
+        <Box>
+          <Navbar />
+        </Box>
+        <Box className="">
           {children}
-        </div>
-      </div>
-    </>
+        </Box>
+      </Grid>
+    </React.Fragment>
   );
 }

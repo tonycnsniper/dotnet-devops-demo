@@ -1,14 +1,15 @@
+import { Container, Box } from "@radix-ui/themes";
 import "./App.css";
 import Layout from "./components/Layout";
 import MoveList from "./pages/movies/List";
 
 function App() {
   return (
-    <div className="App">
+    <Container className="app w-full" size="4" align="center">
       <Layout>
         <MoveList />
       </Layout>
-    </div>
+    </Container>
   );
 }
 
